@@ -76,8 +76,8 @@ public class Patrol : MonoBehaviour
 }
 ```
 Each enemy has its own patrol points set up on the map, during the game it moves between the left and right point of the patrol. 
--In the Direction change method the walking animation gets turned off, enemy enters an idle state for a set duration, and when the idle state ends the bool responsible for the moving direction gets reversed.
--In the Move in direction method, the idle timer gets reset and the walking animation gets turned on. Then the objects local scale gets flipped on the X axis by the given direction int and then starts moving toward the next patrol stop.
--In the Update method the bool responsible for the direction sets up the rest of the script. 
--When the bool is set to go left, script checks if the object reached the left edge position and calls the move in direction method with int equal to -1. When the left edge is reached the direction change method is called.
--The same sequence happens when the bool is set to go right, but the Move in direction method is called with an int equal to 1.
+- In the Direction change method the walking animation gets turned off, enemy enters an idle state for a set duration, and when the idle state ends the bool responsible for the moving direction gets reversed.
+- In the Move in direction method, the idle timer gets reset and the walking animation gets turned on. Then the objects local scale gets flipped on the X axis by the given direction int and then starts moving toward the next patrol stop.
+- In the Update method the bool responsible for the direction sets up the rest of the script. 
+- When the bool is set to go left, script checks if the object reached the left edge position and calls the move in direction method with int equal to -1. When the left edge is reached the direction change method is called.
+- The same sequence happens when the bool is set to go right, but the Move in direction method is called with an int equal to 1.
